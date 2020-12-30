@@ -1,1 +1,1 @@
-# Simple Spring Framework 5 Web Application
+# Spring Boot Web Application
