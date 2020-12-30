@@ -1,6 +1,6 @@
-package com.niveksys.spring5webapp.repositories;
+package com.niveksys.poc.springbootwebapp.repository;
 
-import com.niveksys.spring5webapp.model.Book;
+import com.niveksys.poc.springbootwebapp.model.Book;
 
 import org.springframework.data.repository.CrudRepository;
 

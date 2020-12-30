@@ -1,13 +1,13 @@
-package com.niveksys.spring5webapp;
+package com.niveksys.poc.springbootwebapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Spring5webappApplication {
+public class SpringBootWebappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Spring5webappApplication.class, args);
+		SpringApplication.run(SpringBootWebappApplication.class, args);
 	}
 
 }

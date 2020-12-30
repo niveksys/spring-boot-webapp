@@ -1,4 +1,4 @@
-package com.niveksys.spring5webapp.model;
+package com.niveksys.poc.springbootwebapp.model;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -7,28 +7,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
-public class Book {
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title;
-    private String isbn;
-    @ManyToMany
-    @JoinTable(name = "autho_book", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "authod_id"))
-    private Set<Author> authors = new HashSet<>();
+    private String firstName;
+    private String lastName;
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books = new HashSet<>();
 
-    public Book() {
+    public Author() {
     }
 
-    public Book(String title, String isbn) {
-        this.title = title;
-        this.isbn = isbn;
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Long getId() {
@@ -39,33 +36,28 @@ public class Book {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public Set<Author> getAuthors() {
-        return authors;
+    public Set<Book> getBooks() {
+        return books;
     }
 
-    public void setAuthors(Set<Author> authors) {
-        this.authors = authors;
-    }
-
-    @Override
-    public String toString() {
-        return "Book [authors=" + authors + ", id=" + id + ", isbn=" + isbn + ", title=" + title + "]";
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 
     @Override
@@ -84,7 +76,7 @@ public class Book {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Book other = (Book) obj;
+        Author other = (Author) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -92,4 +84,10 @@ public class Book {
             return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Author [books=" + books + ", firstName=" + firstName + ", id=" + id + ", lastName=" + lastName + "]";
+    }
+
 }

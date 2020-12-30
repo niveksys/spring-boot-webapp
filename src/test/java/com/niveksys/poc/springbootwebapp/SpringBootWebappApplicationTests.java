@@ -1,10 +1,10 @@
-package com.niveksys.spring5webapp;
+package com.niveksys.poc.springbootwebapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Spring5webappApplicationTests {
+class SpringBootWebappApplicationTests {
 
 	@Test
 	void contextLoads() {

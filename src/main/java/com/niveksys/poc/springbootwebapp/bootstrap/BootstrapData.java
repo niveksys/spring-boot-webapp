@@ -1,11 +1,11 @@
-package com.niveksys.spring5webapp.bootstrap;
+package com.niveksys.poc.springbootwebapp.bootstrap;
 
-import com.niveksys.spring5webapp.model.Author;
-import com.niveksys.spring5webapp.model.Book;
-import com.niveksys.spring5webapp.model.Publisher;
-import com.niveksys.spring5webapp.repositories.AuthorRepository;
-import com.niveksys.spring5webapp.repositories.BookRepository;
-import com.niveksys.spring5webapp.repositories.PublisherRepository;
+import com.niveksys.poc.springbootwebapp.model.Author;
+import com.niveksys.poc.springbootwebapp.model.Book;
+import com.niveksys.poc.springbootwebapp.model.Publisher;
+import com.niveksys.poc.springbootwebapp.repository.AuthorRepository;
+import com.niveksys.poc.springbootwebapp.repository.BookRepository;
+import com.niveksys.poc.springbootwebapp.repository.PublisherRepository;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

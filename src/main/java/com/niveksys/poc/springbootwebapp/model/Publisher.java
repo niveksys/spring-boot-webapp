@@ -1,4 +1,4 @@
-package com.niveksys.spring5webapp.model;
+package com.niveksys.poc.springbootwebapp.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
