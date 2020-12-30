@@ -44,17 +44,28 @@ public class BootstrapData implements CommandLineRunner {
         Book spring = new Book("Spring Boot", "123123");
         kevin.getBooks().add(spring);
         spring.getAuthors().add(kevin);
+
+        spring.setPublisher(goodreads);
+        goodreads.getBooks().add(spring);
+
         this.authorRepository.save(kevin);
         this.bookRepository.save(spring);
+        this.publisherRepository.save(goodreads);
 
         Author joyce = new Author("Joyce", "Lau");
         Book cookbook = new Book("Cookbook", "987987");
         joyce.getBooks().add(cookbook);
         cookbook.getAuthors().add(joyce);
+
+        cookbook.setPublisher(goodreads);
+        goodreads.getBooks().add(cookbook);
+
         this.authorRepository.save(joyce);
         this.bookRepository.save(cookbook);
+        this.publisherRepository.save(goodreads);
 
         System.out.println("Nubmer of Books: " + this.authorRepository.count());
+        System.out.println("Publisher Number of Books: " + goodreads.getBooks().size());
     }
 
 }
